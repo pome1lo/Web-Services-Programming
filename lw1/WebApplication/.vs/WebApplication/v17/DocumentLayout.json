@@ -1,26 +1,72 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\",
+  "WorkspaceRootPath": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|d:\\university\\4\\1term\\\u043F\u0432\u0441\\lw1\\webapplication\\webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net.http\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|solutionrelative:webapplication.net.http\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net.http\\iishandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|solutionrelative:webapplication.net.http\\iishandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\webapplication.net\\iishandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|solutionrelative:webapplication.net\\iishandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net.http\\stackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|solutionrelative:webapplication.net.http\\stackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|solutionrelative:webapplication.net\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net.http\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96DC540B-0EAB-4733-85A5-F5290E40A803}|WebApplication.net.http\\WebApplication.net.http.csproj|solutionrelative:webapplication.net.http\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\webapplication.net\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|solutionrelative:webapplication.net\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7DDC1E8-416A-46B7-A1ED-33E6B9DB0F3B}|.net-framework{A7DDC1E8-416A-46B7-A1ED-33E6B9DB0F3B}|WebApplication.net||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|solutionrelative:webapplication.net\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|solutionrelative:webapplication.net\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\webapplication.net\\stackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|solutionrelative:webapplication.net\\stackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A65A11E-FF0F-4A19-BAC3-86702A275C72}|ClassLibrary\\ClassLibrary.csproj|d:\\university\\4\\1term\\\u043F\u0432\u0441\\lw1\\webapplication\\classlibrary\\stackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A65A11E-FF0F-4A19-BAC3-86702A275C72}|ClassLibrary\\ClassLibrary.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\classlibrary\\stackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A65A11E-FF0F-4A19-BAC3-86702A275C72}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\stackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A65A11E-FF0F-4A19-BAC3-86702A275C72}|ClassLibrary\\ClassLibrary.csproj|d:\\university\\4\\1term\\\u043F\u0432\u0441\\lw1\\webapplication\\classlibrary\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A65A11E-FF0F-4A19-BAC3-86702A275C72}|ClassLibrary\\ClassLibrary.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\classlibrary\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A65A11E-FF0F-4A19-BAC3-86702A275C72}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\resultmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|d:\\university\\4\\1term\\\u043F\u0432\u0441\\lw1\\webapplication\\webapplication\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|d:\\university\\4\\1term\\\u043F\u0432\u0441\\lw1\\webapplication\\webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6395B5ED-9758-4E28-A3E1-E3CE05AF533E}|WebApplication\\WebApplication.csproj|solutionrelative:webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C461DB1-B385-4186-B562-950B3C1E6600}|WebApplication.net\\WebApplication.net.csproj|d:\\university\\4\\1term\\pws\\lw1\\webapplication\\webapplication.net\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,15 +76,158 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\Web.config",
+              "RelativeDocumentMoniker": "WebApplication.net\\Web.config",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\Web.config",
+              "RelativeToolTip": "WebApplication.net\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-08T19:33:19.474Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\Web.config",
+              "RelativeDocumentMoniker": "WebApplication.net.http\\Web.config",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\Web.config",
+              "RelativeToolTip": "WebApplication.net.http\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-09T07:07:41.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IISHandler.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\IISHandler.cs",
+              "RelativeDocumentMoniker": "WebApplication.net.http\\IISHandler.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\IISHandler.cs",
+              "RelativeToolTip": "WebApplication.net.http\\IISHandler.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAqwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T07:07:30.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StackManager.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\StackManager.cs",
+              "RelativeDocumentMoniker": "WebApplication.net.http\\StackManager.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\StackManager.cs",
+              "RelativeToolTip": "WebApplication.net.http\\StackManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T07:07:18.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ResultManager.cs",
-              "DocumentMoniker": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\ClassLibrary\\ResultManager.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\ResultManager.cs",
+              "RelativeDocumentMoniker": "WebApplication.net.http\\ResultManager.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net.http\\ResultManager.cs",
+              "RelativeToolTip": "WebApplication.net.http\\ResultManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T07:07:11.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WebApplication.net",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\WebApplication.net.csproj",
+              "RelativeDocumentMoniker": "WebApplication.net\\WebApplication.net.csproj",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\WebApplication.net.csproj",
+              "RelativeToolTip": "WebApplication.net\\WebApplication.net.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-09T07:06:09.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\packages.config",
+              "RelativeDocumentMoniker": "WebApplication.net\\packages.config",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\packages.config",
+              "RelativeToolTip": "WebApplication.net\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-09T07:06:00.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "WebApplication.net\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "WebApplication.net\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T07:04:46.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IISHandler.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\IISHandler.cs",
+              "RelativeDocumentMoniker": "WebApplication.net\\IISHandler.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\IISHandler.cs",
+              "RelativeToolTip": "WebApplication.net\\IISHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T19:37:10.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResultManager.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\ResultManager.cs",
+              "RelativeDocumentMoniker": "WebApplication.net\\ResultManager.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\ResultManager.cs",
+              "RelativeToolTip": "WebApplication.net\\ResultManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T19:33:35.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StackManager.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\StackManager.cs",
+              "RelativeDocumentMoniker": "WebApplication.net\\StackManager.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication.net\\StackManager.cs",
+              "RelativeToolTip": "WebApplication.net\\StackManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T19:33:33.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ResultManager.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\ClassLibrary\\ResultManager.cs",
               "RelativeDocumentMoniker": "ClassLibrary\\ResultManager.cs",
-              "ToolTip": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\ClassLibrary\\ResultManager.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\ClassLibrary\\ResultManager.cs",
               "RelativeToolTip": "ClassLibrary\\ResultManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -46,24 +235,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "StackManager.cs",
-              "DocumentMoniker": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\ClassLibrary\\StackManager.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\ClassLibrary\\StackManager.cs",
               "RelativeDocumentMoniker": "ClassLibrary\\StackManager.cs",
-              "ToolTip": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\ClassLibrary\\StackManager.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\ClassLibrary\\StackManager.cs",
               "RelativeToolTip": "ClassLibrary\\StackManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T05:26:58.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-03T05:26:58.843Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\WebApplication\\Properties\\launchSettings.json",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WebApplication\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\WebApplication\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication\\Properties\\launchSettings.json",
               "RelativeToolTip": "WebApplication\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -71,11 +259,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\WebApplication\\appsettings.json",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication\\appsettings.json",
               "RelativeDocumentMoniker": "WebApplication\\appsettings.json",
-              "ToolTip": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\WebApplication\\appsettings.json",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication\\appsettings.json",
               "RelativeToolTip": "WebApplication\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -83,16 +271,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\WebApplication\\Program.cs",
+              "DocumentMoniker": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication\\Program.cs",
-              "ToolTip": "D:\\University\\4\\1term\\\u041F\u0412\u0421\\lw1\\WebApplication\\WebApplication\\Program.cs",
+              "ToolTip": "D:\\University\\4\\1term\\PWS\\lw1\\WebApplication\\WebApplication\\Program.cs",
               "RelativeToolTip": "WebApplication\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T05:09:14.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-03T05:09:14.268Z"
             }
           ]
         }
