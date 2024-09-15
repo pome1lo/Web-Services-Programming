@@ -1,0 +1,135 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">PWS lw1</h1>
+
+    <!-- Display Result -->
+    <div class="mb-3">
+        <label for="result" class="form-label">Current RESULT:</label>
+        <input type="text" id="result" class="form-control" readonly>
+    </div>
+
+    <!-- POST Input -->
+    <div class="mb-3">
+        <label for="postInput" class="form-label">POST: Set new RESULT</label>
+        <input type="number" id="postInput" class="form-control" placeholder="Enter new RESULT">
+        <button class="btn btn-primary mt-2" onclick="sendPost()">Set RESULT</button>
+    </div>
+
+    <!-- PUT Input -->
+    <div class="mb-3">
+        <label for="putInput" class="form-label">PUT: Add to Stack (ADD)</label>
+        <input type="number" id="putInput" class="form-control" placeholder="Enter number to ADD">
+        <button class="btn btn-warning mt-2" onclick="sendPut()">Add to Stack</button>
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-success" onclick="sendGet()">GET RESULT</button>
+        <button class="btn btn-danger" onclick="sendDelete()">POP from Stack</button>
+    </div>
+
+    <!-- Result Display -->
+    <div class="mt-3">
+        <label for="responseArea" class="form-label">Response:</label>
+        <textarea id="responseArea" class="form-control" rows="5" readonly></textarea>
+    </div>
+</div>
+
+<script>
+    const endpoint = "https://localhost:7008/path.PAA"; // Измените на правильный путь к вашему REST-сервису
+
+    // GET запрос для получения текущего значения RESULT
+    function sendGet() {
+        $.ajax({
+            url: endpoint,
+            method: "GET",
+            success: function(data) {
+                $("#result").val(data.RESULT); // Обновляем значение RESULT на клиенте
+                $("#responseArea").val(JSON.stringify(data, null, 2)); // Показать ответ сервера
+            },
+            error: function(xhr, status, error) {
+                $("#responseArea").val("Error: " + error);
+            }
+        });
+    }
+
+    // POST запрос для установки нового значения RESULT
+    function sendPost() {
+        const resultValue = $("#postInput").val();
+
+        if (resultValue === "") {
+            alert("Please enter a value for RESULT.");
+            return;
+        }
+
+        const resultInt = parseInt(resultValue, 10);
+    
+        if (isNaN(resultInt)) {
+            alert("Please enter a valid number for RESULT.");
+            return;
+        }
+
+        $.ajax({
+            url: endpoint,
+            method: "POST",
+            contentType: "application/json",  // Указываем, что данные отправляются как JSON
+            data: JSON.stringify({ RESULT: resultInt }),  // Преобразуем объект в JSON с числовым значением
+            success: function(data) {
+                $("#result").val(data.RESULT);
+                $("#responseArea").val(JSON.stringify(data, null, 2));
+            },
+            error: function(xhr, status, error) {
+                $("#responseArea").val("Error: " + error);
+            }
+        });
+    }
+
+    // PUT запрос для добавления элемента в стек
+    function sendPut() {
+        const addValue = $("#putInput").val();
+        if (addValue === "") {
+            alert("Please enter a value to ADD.");
+            return;
+        }
+
+         const resultInt = parseInt(addValue, 10);
+
+        $.ajax({
+            url: endpoint,
+            method: "PUT",
+            contentType: "application/json",  // Указываем, что данные отправляются как JSON
+            data: JSON.stringify({ ADD: resultInt }),  // Преобразуем объект в JSON
+            success: function(data) {
+                $("#result").val(data.RESULT);
+                $("#responseArea").val(JSON.stringify(data, null, 2));
+            },
+            error: function(xhr, status, error) {
+                $("#responseArea").val("Error: " + error);
+            }
+        });
+    }
+
+    // DELETE запрос для извлечения элемента из стека
+    function sendDelete() {
+        $.ajax({
+            url: endpoint,
+            method: "DELETE",
+            success: function(data) {
+                $("#result").val(data.RESULT);
+                $("#responseArea").val(JSON.stringify(data, null, 2));
+            },
+            error: function(xhr, status, error) {
+                if(status === 400) {
+                    $("#responseArea").val("0");
+                } else {
+                    $("#responseArea").val("Error: " + error);
+                }
+            }
+        });
+    }
+</script>
