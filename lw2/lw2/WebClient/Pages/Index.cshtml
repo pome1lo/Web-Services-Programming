@@ -41,16 +41,16 @@
 </div>
 
 <script>
-    const endpoint = "https://localhost:7008/path.PAA"; // Измените на правильный путь к вашему REST-сервису
+    const endpoint = "https://localhost:7008/path.PAA"; 
 
-    // GET запрос для получения текущего значения RESULT
+    
     function sendGet() {
         $.ajax({
             url: endpoint,
             method: "GET",
             success: function(data) {
-                $("#result").val(data.RESULT); // Обновляем значение RESULT на клиенте
-                $("#responseArea").val(JSON.stringify(data, null, 2)); // Показать ответ сервера
+                $("#result").val(data.RESULT); 
+                $("#responseArea").val(JSON.stringify(data, null, 2)); 
             },
             error: function(xhr, status, error) {
                 $("#responseArea").val("Error: " + error);
@@ -58,7 +58,7 @@
         });
     }
 
-    // POST запрос для установки нового значения RESULT
+    
     function sendPost() {
         const resultValue = $("#postInput").val();
 
@@ -77,8 +77,8 @@
         $.ajax({
             url: endpoint,
             method: "POST",
-            contentType: "application/json",  // Указываем, что данные отправляются как JSON
-            data: JSON.stringify({ RESULT: resultInt }),  // Преобразуем объект в JSON с числовым значением
+            contentType: "application/json", 
+            data: JSON.stringify({ RESULT: resultInt }), 
             success: function(data) {
                 $("#result").val(data.RESULT);
                 $("#responseArea").val(JSON.stringify(data, null, 2));
@@ -89,7 +89,6 @@
         });
     }
 
-    // PUT запрос для добавления элемента в стек
     function sendPut() {
         const addValue = $("#putInput").val();
         if (addValue === "") {
@@ -102,8 +101,8 @@
         $.ajax({
             url: endpoint,
             method: "PUT",
-            contentType: "application/json",  // Указываем, что данные отправляются как JSON
-            data: JSON.stringify({ ADD: resultInt }),  // Преобразуем объект в JSON
+            contentType: "application/json", 
+            data: JSON.stringify({ ADD: resultInt }), 
             success: function(data) {
                 $("#result").val(data.RESULT);
                 $("#responseArea").val(JSON.stringify(data, null, 2));
@@ -114,7 +113,6 @@
         });
     }
 
-    // DELETE запрос для извлечения элемента из стека
     function sendDelete() {
         $.ajax({
             url: endpoint,

@@ -1,6 +1,5 @@
 var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
 
-// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost7248",
@@ -9,14 +8,11 @@ builder.Services.AddCors(options =>
                           .AllowAnyMethod());
 });
 
-// Add services to the container (in this case, no specific services are needed)
 var app = builder.Build();
 
-// Global state for the stack and RESULT
 var globalStack = new Stack<int>();
 int result = 0;
 
-// Define the endpoint mapping for HTTP methods
 app.MapGet("{qm}.PAA", async context =>
 {
     context.Response.ContentType = "application/json";
@@ -60,7 +56,7 @@ app.MapPut("{qm}.PAA", async context =>
         {
             int add = data["ADD"];
             globalStack.Push(add);
-            result += add;  // Update RESULT with the new value added to the stack
+            result += add;
             context.Response.ContentType = "application/json";
             await context.Response.WriteAsync($"{{\"RESULT\": {result}}}");
         }
@@ -82,7 +78,7 @@ app.MapDelete("{qm}.PAA", async context =>
     if (globalStack.Count > 0)
     {
         int poppedValue = globalStack.Pop();
-        result -= poppedValue;  // Update RESULT after popping the top element
+        result -= poppedValue;
         context.Response.ContentType = "application/json";
         await context.Response.WriteAsync($"{{\"RESULT\": {result}}}");
     }
@@ -93,7 +89,7 @@ app.MapDelete("{qm}.PAA", async context =>
     }
 });
 
-// Configure the HTTP request pipeline
+
 app.UseCors("AllowLocalhost7248");
 app.UseHttpsRedirection();
 app.UseRouting();
