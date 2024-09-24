@@ -7,8 +7,8 @@ namespace WebApplication.NET
 {
     public class ISSHandler : IHttpHandler
     {
-        private static Stack<int> globalStack = new Stack<int>(); // Глобальный стек
-        private static int result = 0; // Первоначальное значение RESULT
+        private static Stack<int> globalStack = new Stack<int>();
+        private static int result = 0;
 
         public bool IsReusable => true;
 
@@ -16,7 +16,6 @@ namespace WebApplication.NET
         {
             string requestType = context.Request.HttpMethod;
 
-            // Обработка CORS preflight-запросов
             if (requestType == "OPTIONS")
             {
                 context.Response.AddHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
@@ -33,7 +32,7 @@ namespace WebApplication.NET
                 case "PUT": HandlePutRequest(context); break;
                 case "DELETE": HandleDeleteRequest(context); break;
                 default:
-                    context.Response.StatusCode = 405; // Метод не разрешен
+                    context.Response.StatusCode = 405;
                     break;
             }
         }
