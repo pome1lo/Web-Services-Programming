@@ -1,0 +1,167 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Список студентов";
+}
+
+<div class="container">
+    <h2 class="my-4">Список студентов</h2>
+
+    <!-- Кнопка для загрузки данных -->
+    <div class="text-right mb-3">
+        <button id="loadStudents" class="btn btn-primary">Загрузить список студентов</button>
+    </div>
+
+    <!-- Таблица для отображения данных -->
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Телефон</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody id="studentsTable">
+            <!-- Студенты будут динамически добавляться здесь -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Модальное окно для редактирования -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Редактировать студента</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <input type="hidden" id="editId" />
+                    <div class="mb-3">
+                        <label for="editName" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="editName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editPhone" class="form-label">Телефон</label>
+                        <input type="text" class="form-control" id="editPhone" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" onclick="saveStudent()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const serverUrl = 'http://localhost:5227';
+    document.getElementById("loadStudents").addEventListener("click", function () {
+        // Отправляем GET-запрос к API с параметрами
+        fetch(serverUrl + `/api/students`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Ошибка HTTP: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                const studentsTable = document.getElementById("studentsTable");
+                studentsTable.innerHTML = ""; // Очищаем таблицу
+
+                // Проверяем, есть ли в ответе данные
+                if (data.students && data.students.length > 0) {
+                    data.students.forEach(student => {
+                        const row = document.createElement("tr");
+
+                        row.innerHTML = `
+                                <td>${student.id}</td>
+                                <td>${student.name}</td>
+                                <td>${student.phone}</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editStudent(${student.id}, '${student.name}', '${student.phone}')">Редактировать</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteStudent(${student.id})">Удалить</button>
+                                </td>
+                            `;
+
+                        studentsTable.appendChild(row);
+                    });
+                } else {
+                    // Если студентов нет, выводим сообщение
+                    studentsTable.innerHTML = `<tr><td colspan="4" class="text-center">Нет данных</td></tr>`;
+                }
+            })
+            .catch(error => {
+                console.error("Ошибка при загрузке студентов:", error);
+            });
+    });
+
+    function deleteStudent(id) {
+        if (confirm("Вы уверены, что хотите удалить студента?")) {
+            fetch(serverUrl + `/api/students/` + id, {
+                method: 'DELETE'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Студент удален.");
+                        document.getElementById("loadStudents").click(); // Обновить список
+                    } else {
+                        response.text() // или response.json(), если ответ в формате JSON
+                            .then(body => {
+                                console.log('Response status:', response.status);
+                                console.log('Response body:', body);
+                                alert("Ошибка при удалении студента.");
+                            });
+                    }
+                });
+        }
+    }
+
+    function editStudent(id, name, phone) {
+        // Заполняем модальное окно данными студента
+        document.getElementById('editId').value = id;
+        document.getElementById('editName').value = name;
+        document.getElementById('editPhone').value = phone;
+
+        // Открываем модальное окно
+        var editModal = new bootstrap.Modal(document.getElementById('editModal'));
+        editModal.show();
+    }
+
+    function saveStudent() {
+        const id = document.getElementById('editId').value;
+        const name = document.getElementById('editName').value;
+        const phone = document.getElementById('editPhone').value;
+
+        // Отправляем PUT-запрос на сервер для обновления данных студента
+        fetch(serverUrl + `/api/students/` + id, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id, name, phone })
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert("Данные студента обновлены.");
+                    document.getElementById("loadStudents").click(); // Обновить список
+                    var editModal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
+                    editModal.hide();
+                } else {
+                    response.text() // или response.json(), если ответ в формате JSON
+                        .then(body => {
+                            console.log('Response status:', response.status);
+                            console.log('Response body:', body);
+                            alert("Ошибка при обновлении данных студента.");
+                        });
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка при обновлении студента:', error);
+            });
+    }
+</script>

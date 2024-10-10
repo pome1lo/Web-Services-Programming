@@ -1,0 +1,96 @@
+﻿body {
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+
+/* Form styles */
+.card {
+    align-items: center;
+    padding: 0 10px 15px 10px;
+}
+
+.form-width {
+    max-width: 25rem;
+}
+
+.form-input-width {
+    width: 270px;
+    margin: -5px 0px -5px 0px;
+}
+
+.has-float-label {
+    position: relative;
+}
+
+    .has-float-label label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: text;
+        font-size: 75%;
+        opacity: 1;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        top: -.9em;
+        left: 0.75rem;
+        z-index: 3;
+        line-height: 1;
+        padding: 0 1px;
+    }
+
+        .has-float-label label::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            background: white;
+            height: 2px;
+            top: 50%;
+            left: -.2em;
+            right: -.2em;
+            z-index: -1;
+        }
+
+    .has-float-label .form-control::-webkit-input-placeholder {
+        opacity: 1;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+    }
+
+    .has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+        opacity: 0;
+    }
+
+    .has-float-label .form-control:placeholder-shown:not(:focus) + label {
+        font-size: 100%;
+        opacity: .5;
+        top: .4em;
+    }
+
+.input-group .has-float-label {
+    display: table-cell;
+}
+
+    .input-group .has-float-label .form-control {
+        border-radius: 0.25rem;
+    }
+
+
+/* Form styles */
