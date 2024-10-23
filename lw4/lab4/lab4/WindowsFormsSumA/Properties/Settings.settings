@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsFormsSumA.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="S1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">textBox1</Value>
+    </Setting>
+    <Setting Name="K2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">K3</Value>
+    </Setting>
+    <Setting Name="F1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">textBox3</Value>
+    </Setting>
+    <Setting Name="S2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">S3</Value>
+    </Setting>
+    <Setting Name="K1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">K1</Value>
+    </Setting>
+    <Setting Name="F2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F3</Value>
+    </Setting>
+    <Setting Name="S3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">textBox7</Value>
+    </Setting>
+    <Setting Name="K3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">textBox8</Value>
+    </Setting>
+    <Setting Name="F3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">textBox9</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
