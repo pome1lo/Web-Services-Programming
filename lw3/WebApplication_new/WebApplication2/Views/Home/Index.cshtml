@@ -66,11 +66,14 @@
                         <h5>Parameters</h5>
                         <div class="form-group mt-2 w-100">
                             <div class="form-check form-check-inline text-left">
-                                <input class="form-check-input" type="radio" name="format" id="jsonFormat" value="json" checked>
+                                <input class="form-check-input" type="radio" name="format" id="jsonFormat" value="json" checked
+                                       onclick="setFormat("json")"
+                                       >
                                 <label class="form-check-label" for="jsonFormat">JSON</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="format" id="xmlFormat" value="xml">
+                                <input class="form-check-input" type="radio" name="format" id="xmlFormat" value="xml"
+                                       onclick="setFormat("xml")">
                                 <label class="form-check-label" for="xmlFormat">XML</label>
                             </div>
                         </div>
@@ -129,7 +132,7 @@
                                 <th>Phone</th>
                                 <th>Buttons</th>
                             </tr>
-                        </thead>    
+                        </thead>
                         <tbody id="tbl"></tbody>
                     </table>
                     <div>
@@ -141,12 +144,18 @@
             </div>
         </div>
     </div>
-    
+
 
     <script src="~/Scripts/inputsValidation.js"></script>
     <script>
         var pagination = 0;
         var prevBtnBlocked = true;
+
+        var FORMAT = "json";
+
+        async function setFormat(str) {
+            FORMAT = str;
+        }
 
         getStudents();
 
@@ -161,10 +170,12 @@
                 fetch(href,
                     {
                         method: method,
-                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/xml' },
+                        headers: { 'Content-Type': 'application/xml', 'Accept': 'application/xml' },
                         body: JSON.stringify(data)
                     })
                     .then((response) => {
+
+                        console.log(href);
                         return response.text();
                     })
                     .then((data) => {
@@ -179,6 +190,8 @@
                         body: JSON.stringify(data)
                     })
                     .then((response) => {
+
+                        console.log(href);
                         return response.json();
                     })
                     .then((data) => {
@@ -396,17 +409,19 @@
         }
 
         function generateTableRowForStudent(student) {
+            var FORMAT = $('input[name="format"]:checked').val();
+            console.log(FORMAT);
             return `
-        <tr>
-            <td>${student.Id || ''}</td>
-            <td><input type='text' id='${student.Id}Name' value='${student.Name}' name="name" /></td>
-            <td><input type='text' id='${student.Id}Phone' value='${student.Phone}' name="phone" /></td>
-            <td>
-                <button class="btn btn-success" onClick='window.location.href="/api/student/${student.Id}"'>Get</button>
-                <button class="btn btn-warning" onClick='updateStudent("/api/student/${student.Id}", "PUT", ${student.Id})'>Update</button>
-                <button class="btn btn-danger" onClick='deleteStudent("/api/student/${student.Id}", "DELETE")'>Delete</button>
-            </td>
-        </tr>`;
+            <tr>
+                <td>${student.Id || ''}</td>
+                <td><input type='text' id='${student.Id}Name' value='${student.Name}' name="name" /></td>
+                <td><input type='text' id='${student.Id}Phone' value='${student.Phone}' name="phone" /></td>
+                <td>
+                    <button class="btn btn-success" onClick='window.location.href="/api/student${FORMAT != null && FORMAT === "xml" ? ".xml" : ".json" }/${student.Id}"'>Get</button>
+                    <button class="btn btn-warning" onClick='updateStudent("/api/student/${student.Id}", "PUT", ${student.Id})'>Update</button>
+                    <button class="btn btn-danger" onClick='deleteStudent("/api/student/${student.Id}", "DELETE")'>Delete</button>
+                </td>
+            </tr>`;
         }
 
 
