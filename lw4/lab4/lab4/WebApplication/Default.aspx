@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-     <h2>Adds Page</h2>
+     
 <label for="A">A:</label>
 <asp:TextBox runat="server" ID="A" />
 <br />
@@ -11,7 +11,7 @@
 <asp:TextBox runat="server" ID="B" />
 <br />
 
-<label for="result">Result:</label>
+<label for="result">Result:<br/><br/></label>
 <asp:TextBox runat="server" ID="result" ReadOnly="true" />
 <br />
 

@@ -12,7 +12,6 @@ namespace Simplex
     [WebService(Namespace = "http://paa/", Description = "Simplex")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // Чтобы разрешить вызывать веб-службу из скрипта с помощью ASP.NET AJAX, раскомментируйте следующую строку. 
     [System.Web.Script.Services.ScriptService]
     public class Simplex : System.Web.Services.WebService
     {
@@ -34,33 +33,37 @@ namespace Simplex
                 System.Diagnostics.Debug.WriteLine(requestBody);
                 Console.WriteLine(requestBody);
 
-                XmlDocument doc = new XmlDocument();
-                doc.LoadXml(requestBody);
-
-                XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
-                nsmgr.AddNamespace("paa", "http://paa/");
-
-                XmlNode aNode = doc.SelectSingleNode("//paa:Sum/paa:a", nsmgr);
-                XmlNode bNode = doc.SelectSingleNode("//paa:Sum/paa:b", nsmgr);
-
-                if (aNode != null)
+                if (a1 == null && a2 == null)
+                // output
                 {
-                    a1 = new A(
-                        aNode["s"]?.InnerText,
-                        int.Parse(aNode["k"]?.InnerText ?? "0"),
-                        float.Parse(aNode["f"]?.InnerText ?? "0")
-                    );
-                }
 
-                if (bNode != null)
-                {
-                    a2 = new A(
-                        bNode["s"]?.InnerText,
-                        int.Parse(bNode["k"]?.InnerText ?? "0"),
-                        float.Parse(bNode["f"]?.InnerText ?? "0")
-                    );
-                }
+                    XmlDocument doc = new XmlDocument();
+                    doc.LoadXml(requestBody);
 
+                    XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
+                    nsmgr.AddNamespace("paa", "http://paa/");
+
+                    XmlNode aNode = doc.SelectSingleNode("//paa:Sum/paa:a", nsmgr);
+                    XmlNode bNode = doc.SelectSingleNode("//paa:Sum/paa:b", nsmgr);
+
+                    if (aNode != null)
+                    {
+                        a1 = new A(
+                            aNode["s"]?.InnerText,
+                            int.Parse(aNode["k"]?.InnerText ?? "0"),
+                            float.Parse(aNode["f"]?.InnerText ?? "0")
+                        );
+                    }
+
+                    if (bNode != null)
+                    {
+                        a2 = new A(
+                            bNode["s"]?.InnerText,
+                            int.Parse(bNode["k"]?.InnerText ?? "0"),
+                            float.Parse(bNode["f"]?.InnerText ?? "0")
+                        );
+                    }
+                }
             }
 
             return new A(a1.s + a2.s, a1.k + a2.k, a1.f + a2.f);

@@ -17,6 +17,8 @@ namespace WindowsFormsAppProxy
         {
             var a1 = new A { s = S1.Text, k = Convert.ToInt32(K1.Text), f = float.Parse(F1.Text) };
             var a2 = new A { s = S2.Text, k = Convert.ToInt32(K2.Text), f = float.Parse(F2.Text) };
+            MessageBox.Show(a1.f.ToString());
+            MessageBox.Show(a2.f.ToString());
             var res = _client.Sum(a1, a2);
 
             S3.Text = res.s;
