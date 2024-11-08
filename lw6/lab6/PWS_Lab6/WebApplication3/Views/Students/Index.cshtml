@@ -1,0 +1,98 @@
+﻿<!-- Bootstrap CDN -->
+@*<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />*@
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Students and Notes Management</h2>
+
+    <!-- Students Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>Students</h4>
+        </div>
+        <div class="card-body">
+            <ul class="list-group mb-4">
+                @foreach (var student in Model)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        @student.id - @student.name
+                        <form action="/Students/Delete" method="post" class="form-inline">
+                            <input type="hidden" name="id" value="@student.id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </li>
+                }
+            </ul>
+
+            <!-- Add New Student -->
+            <h5 class="mb-3">Add New Student</h5>
+            <form action="/Students/Create" method="post" class="form-inline">
+                <div class="form-group">
+                    <input type="text" name="studentName" class="form-control mr-2" placeholder="Student Name" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+
+            <!-- Update Student -->
+            <h5 class="mt-4">Update Student</h5>
+            <form action="/Students/Update" method="post" class="form-inline">
+                <div class="form-group">
+                    <input type="number" name="id" class="form-control mr-2" placeholder="Student ID" required />
+                    <input type="text" name="newName" class="form-control mr-2" placeholder="New Name" required />
+                </div>
+                <button type="submit" class="btn btn-success">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notes Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>Notes</h4>
+        </div>
+        <div class="card-body">
+            <ul class="list-group mb-4">
+                @if (ViewBag.Notes != null)
+                {
+                    foreach (var note in ViewBag.Notes)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @note.id - @note.stud_id - @note.subject - @note.note1
+                            <form action="/Students/DeleteNote" method="post" class="form-inline">
+                                <input type="hidden" name="id" value="@note.id" />
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </li>
+                    }
+                }
+            </ul>
+
+            <!-- Add New Note -->
+            <h5 class="mb-3">Add New Note</h5>
+            <form action="/Students/CreateNote" method="post" class="form-inline">
+                <div class="form-group">
+                    <input type="number" name="studentId" class="form-control mr-2" placeholder="Student ID" required />
+                    <input type="text" name="subject" class="form-control mr-2" placeholder="Subject" required />
+                    <input type="number" name="noteValue" class="form-control mr-2" placeholder="Note" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Add Note</button>
+            </form>
+
+            <!-- Update Note -->
+            <h5 class="mt-4">Update Note</h5>
+            <form action="/Students/UpdateNote" method="post" class="form-inline">
+                <div class="form-group">
+                    <input type="number" name="id" class="form-control mr-2" placeholder="Note ID" required />
+                    <input type="number" name="studentId" class="form-control mr-2" placeholder="Student ID" required />
+                    <input type="text" name="subject" class="form-control mr-2" placeholder="Subject" required />
+                    <input type="number" name="noteValue" class="form-control mr-2" placeholder="Note" required />
+                </div>
+                <button type="submit" class="btn btn-success">Update Note</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript for Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+@*<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>*@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

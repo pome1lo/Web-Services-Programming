@@ -1,0 +1,45 @@
+﻿@model IEnumerable<StudentsModel.student>
+@{
+    ViewBag.Title = "Student List";
+}
+
+<h2>Students</h2>
+<ul>
+    @foreach (var student in Model)
+    {
+        <li>
+            @student.id - @student.name
+            <form action="/Students/Delete" method="post">
+                <input type="hidden" name="id" value="@student.id" />
+                <input type="submit" value="Delete" />
+            </form>
+        </li>
+    }
+</ul>
+
+<h3>Add New Student</h3>
+<form action="/Students/Create" method="post">
+    <label>Name:</label>
+    <input type="text" name="studentName" />
+    <input type="submit" value="Add" />
+</form>
+
+<h3>Update Student</h3>
+<form action="/Students/Update" method="post">
+    <label>Student ID:</label>
+    <input type="number" name="id" />
+    <label>New Name:</label>
+    <input type="text" name="newName" />
+    <input type="submit" value="Update" />
+</form>
+
+@if (ViewBag.Notes != null)
+{
+    <h2>Notes</h2>
+    <ul>
+        @foreach (var note in ViewBag.Notes)
+        {
+            <li>@note.id - @note.stud_id - @note.subject - @note.note1</li>
+        }
+    </ul>
+}
